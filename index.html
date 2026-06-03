@@ -330,10 +330,7 @@
     }
 
     function formatarResultadoComGrupo(resultado) {
-      const bicho = obterBichoPorResultado(resultado);
-      if (!bicho) return resultado;
-
-      return `${resultado}-${bicho.grupo}`;
+      return resultado;
     }
 
     function obterTipoSelecionado() {
@@ -381,7 +378,7 @@
       if (!bicho) return;
 
       const lineX = escalaX(config.bicho.lineX);
-      const texto = bicho.nome;
+      const texto = `${bicho.grupo} - ${bicho.nome}`;
       const fontSize = escalaFonte(config.bicho.fontSize);
       const imageWidth = escalaX(config.bicho.imageWidth);
       const imageHeight = escalaY(config.bicho.imageHeight);
